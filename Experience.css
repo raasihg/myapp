@@ -1,0 +1,189 @@
+/* Restyled Experience Page using Existing Structure */
+.experience-page {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  min-height: 100vh;
+  background: linear-gradient(120deg, #f0f4ff 0%, #e6ecf3 100%);
+  color: #212121;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.sidebar {
+  flex: 0 0 280px;
+  background: #1a1a2e;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2rem 1rem;
+  gap: 2rem;
+  height: 100vh;
+}
+
+.profile-pic-triangle {
+  width: 160px;
+  height: 160px;
+  clip-path: polygon(50% 0%, 100% 100%, 0% 100%);
+  object-fit: cover;
+  border: 4px solid #5b42f3;
+  box-shadow: 0 0 12px rgba(175, 64, 255, 0.6);
+}
+
+.btn-resume {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: #5b42f3;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: 14px;
+  font-weight: 600;
+  text-decoration: none;
+  box-shadow: 0 4px 12px #af40ff;
+  transition: all 0.3s ease;
+}
+
+.btn-resume:hover {
+  background: #af40ff;
+  transform: scale(1.05);
+}
+
+.experience-grid {
+  flex: 1;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  padding: 3rem 2rem;
+  align-content: flex-start;
+  overflow-y: auto;
+}
+
+.e-card {
+  position: relative;
+  width: 640px;
+  background: #ffffff;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 8px 28px rgba(0, 0, 0, 0.1);
+  color: #111;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.e-card:hover {
+  transform: scale(1.02);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.2);
+}
+
+.wave {
+  position: absolute;
+  width: 540px;
+  height: 700px;
+  opacity: 0.5;
+  left: 0;
+  top: 0;
+  margin-left: -50%;
+  margin-top: -70%;
+  background: linear-gradient(744deg, #af40ff, #5b42f3 60%, #00ddeb);
+  border-radius: 40%;
+  animation: wave 55s infinite linear;
+  z-index: 0;
+}
+
+.wave:nth-child(2),
+.wave:nth-child(3) {
+  top: 210px;
+}
+.wave:nth-child(2) {
+  animation-duration: 50s;
+}
+.wave:nth-child(3) {
+  animation-duration: 45s;
+}
+
+@keyframes wave {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.e-card-content {
+  position: relative;
+  z-index: 1;
+  padding: 2rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  text-align: center;
+}
+
+.e-card-content h2 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-bottom: 0.3rem;
+  color: #222;
+}
+
+.e-card-content h3 {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #5b42f3;
+}
+
+.e-card-content .duration {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: #555;
+}
+
+.e-card-content .icon {
+  font-size: 0.9rem;
+}
+
+.e-card-content ul {
+  list-style: disc;
+  text-align: left;
+  padding-left: 1.5rem;
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #333;
+  max-height: none;
+  overflow: visible;
+}
+
+.e-card-content ul li {
+  margin-bottom: 0.6rem;
+}
+
+@media (max-width: 768px) {
+  .experience-page {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    width: 100%;
+    height: auto;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+
+  .experience-grid {
+    padding: 2rem 1rem;
+  }
+
+  .e-card {
+    width: 90%;
+  }
+}

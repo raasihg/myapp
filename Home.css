@@ -1,0 +1,103 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.home-container {
+  width: 100%;
+  min-height: 100vh;
+  background: #f0f4f8;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Background text animation container */
+.background-container {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.dynamic-text {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #333;
+  transition: all 0.5s ease;
+}
+
+/* Animated lines (optional subtle style) */
+.animated-lines {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-bottom: 15px;
+}
+
+.line {
+  width: 30px;
+  height: 2px;
+  background-color: #888;
+  opacity: 0.6;
+}
+
+/* Home section with profile and text */
+.home-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  padding: 20px;
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Profile image */
+.profile-area .main-profile-pic {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 3px solid #ccc;
+}
+
+/* Content box */
+.content-box {
+  text-align: center;
+  color: #333;
+}
+
+.content-box h1 {
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+}
+
+.content-box p {
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.highlight {
+  color: #007bff;
+  font-weight: 600;
+}
+
+/* Button styling */
+.lets-go-button {
+  margin-top: 15px;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.lets-go-button:hover {
+  background-color: #0056b3;
+}

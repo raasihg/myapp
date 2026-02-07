@@ -1,0 +1,77 @@
+/* ===== Global Reset ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/* App.css */
+html, body, #root {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  font-family: sans-serif;
+  background-color: #d9dbdf;
+  
+  
+}
+
+* {
+  box-sizing: inherit;
+}
+
+.app-container {
+  height: 100%;
+  width: 100%;
+  background-color: #d0440d;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Fixed navbar */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 80px; /* Set this based on your Navbar height */
+  background-color: #293fe8;
+  z-index: 1000;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+/* Push content below navbar */
+.main-content {
+  padding-top: 80px; /* Match navbar height */
+  flex: 1;
+  width: 100%;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+
+/* ===== Navbar ===== */
+.navbar {
+  width: 100%;
+  height: 70px;
+  background-color: #1e1e2f;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 2rem;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+}
+
+/* Add styles for responsiveness if needed */
+@media screen and (max-width: 768px) {
+  .navbar {
+    padding: 0 1rem;
+  }
+
+  .main-content {
+    padding-top: 60px;
+  }
+}

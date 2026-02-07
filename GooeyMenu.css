@@ -1,0 +1,92 @@
+.gooey-menu {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 30px;
+  padding: 20px;
+  position: relative;
+  z-index: 10;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 20px;
+  backdrop-filter: blur(15px);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+  animation: fadeIn 0.5s ease-out forwards;
+}
+
+.menu-item-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.menu-item {
+  text-decoration: none;
+  color: #fff;
+  width: 80px;
+  height: 80px;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  backdrop-filter: blur(12px);
+  transition: transform 0.3s ease, background 0.3s ease;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+
+.menu-item .icon {
+  margin-bottom: 4px;
+  transition: transform 0.3s ease;
+}
+
+.menu-item .label {
+  font-size: 13px;
+  font-weight: 500;
+  opacity: 0.9;
+}
+
+.menu-item:hover {
+  transform: scale(1.1);
+  background: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 0 12px rgba(255, 255, 255, 0.2);
+}
+
+.menu-item:hover .icon {
+  transform: rotate(10deg) scale(1.2);
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive menu layout */
+@media screen and (max-width: 768px) {
+  .gooey-menu {
+    gap: 15px;
+    padding: 15px;
+  }
+
+  .menu-item {
+    width: 70px;
+    height: 70px;
+    border-radius: 16px;
+  }
+
+  .menu-item .label {
+    font-size: 12px;
+  }
+}

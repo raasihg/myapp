@@ -1,0 +1,121 @@
+/* Navbar base */
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: rgba(11, 3, 71, 0.95); /* translucent dark blue */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(8px);
+  z-index: 999;
+  transition: top 0.3s ease, opacity 0.3s ease;
+}
+
+/* Show / Hide Navbar */
+.navbar-visible {
+  top: 0;
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.navbar-hidden {
+  top: -80px; /* move up out of viewport */
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* Navbar Container */
+.navbar-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Logo Circle */
+.logo-circle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 55px;
+  height: 55px;
+  background: linear-gradient(135deg, #d53434, #b82f10);
+  border-radius: 50%;
+  color: white;
+  font-weight: 700;
+  font-size: 1.6rem;
+  text-decoration: none;
+  box-shadow: 0 4px 10px rgba(184, 47, 16, 0.7);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  user-select: none;
+}
+
+.logo-circle:hover {
+  transform: scale(1.1);
+  box-shadow: 0 6px 15px rgba(184, 47, 16, 0.95);
+  background: linear-gradient(135deg, #b82f10, #090808);
+}
+
+/* Nav Links */
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links li {
+  position: relative;
+}
+
+.nav-links a {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: white;
+  font-weight: 600;
+  font-size: 1rem;
+  text-decoration: none;
+  padding: 0.3rem 0;
+  transition: color 0.3s ease;
+  position: relative;
+}
+
+.nav-links a .nav-icon {
+  font-size: 1.2rem;
+  color: #b82f10;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: #0e29c4;
+}
+
+.nav-links a:hover .nav-icon {
+  color: #0e29c4;
+}
+
+/* Active Link underline */
+.active-link::after {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: #0e29c4;
+  border-radius: 2px;
+  animation: slideIn 0.4s ease forwards;
+}
+
+@keyframes slideIn {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}

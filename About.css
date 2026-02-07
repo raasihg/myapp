@@ -1,0 +1,267 @@
+/* General Layout */
+.about-modern-layout {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 3rem;
+  margin-top: 30px;
+  background: #f5f7fa;
+  transition: all 0.5s ease;
+  position: relative;
+  opacity: 0; /* Start invisible */
+  animation: fadeIn 1s forwards; /* Fade in effect */
+  animation-delay: 0.5s; /* Delay for the initial fade-in */
+}
+
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+/* Header */
+.section-title {
+  font-size: 2.5rem;
+  color: #333;
+  margin-bottom: 1rem;
+  font-weight: 700;
+  text-align: center;
+  text-decoration: underline;
+  text-decoration-color: #eb3908; /* Underline color */
+  text-decoration-thickness: 5px; /* Underline thickness */
+  text-underline-offset: 5px; /* Space between text and underline */
+  text-decoration-skip-ink: auto; /* Skip ink for better readability */
+  font-family: 'Arial', sans-serif;
+  font-style: italic;
+  font-weight: 600;
+  font-size: 2.5rem;
+  color: #cc0d0d;
+  text-align: center;
+  margin-bottom: 1rem;
+  margin-top: 90px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  opacity: 0; /* Initially hidden */
+  animation: fadeIn 1s forwards;
+  animation-delay: 1s; /* Delay for section title appearance */
+  transition: all 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.section-title:hover {
+  color: #19c8df; /* Change color on hover */
+  border-radius: 50%; /* Circle shape on hover */
+  padding: 10px 20px; /* Add some padding for the circle effect */
+  background-color: #f5f7fa; /* Light background */
+}
+
+/* Subtitle */
+.section-subtitle {
+  font-size: 1.25rem;
+  color: #555;
+  text-align: center;
+  margin-bottom: 2rem;
+  line-height: 1.6;
+  font-style: italic;
+  opacity: 0; /* Initially hidden */
+  animation: fadeIn 1s forwards;
+  animation-delay: 1.5s; /* Delay for subtitle appearance */
+}
+
+/* Card Layout */
+.content-flex-container {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  gap: 2rem;
+  margin-top: 2rem;
+  opacity: 0; /* Initially hidden */
+  animation: fadeIn 1s forwards;
+  animation-delay: 2s; /* Delay for card layout appearance */
+}
+
+
+
+.left-card:hover,
+.right-card:hover {
+  transform: translateY(-10px);
+}
+
+.left-card {
+  width: 60%;
+}
+
+.right-card {
+  width: 40%;
+}
+
+.left-card h2, .right-card h2 {
+  font-size: 2rem;
+  color: #333;
+}
+
+.left-card p, .right-card p {
+  color: #666;
+  font-size: 1rem;
+}
+
+.left-card .button-group {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.left-card .button-64 {
+  align-items: center;
+  background-image: linear-gradient(144deg, #AF40FF, #5B42F3 50%, #00DDEB);
+  border: 0;
+  border-radius: 8px;
+  box-shadow: rgba(151, 65, 252, 0.2) 0 15px 30px -5px;
+  color: #FFFFFF;
+  display: flex;
+  font-family: Phantomsans, sans-serif;
+  font-size: 20px;
+  justify-content: center;
+  line-height: 1em;
+  min-width: 140px;
+  padding: 3px;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  opacity: 0; /* Initially hidden */
+  animation: fadeIn 1s forwards;
+  animation-delay: 3s; /* Delay for button appearance */
+}
+
+.left-card .button-64:active,
+.left-card .button-64:hover {
+  outline: 0;
+  transform: scale(1.05);
+}
+
+.left-card .button-64 span {
+  background-color: rgb(5, 6, 45);
+  padding: 16px 24px;
+  border-radius: 6px;
+  width: 100%;
+  height: 100%;
+  transition: 300ms;
+}
+
+.left-card .button-64:hover span {
+  background: none;
+}
+
+/* Hexagon Image */
+.hexagon-image {
+  position: center;
+  width: 520px;
+  height: 320px;
+  margin-left: 20px;
+  margin-bottom: 1.5rem;
+  overflow: hidden;
+  border-radius: 15%;
+  opacity: 0; /* Initially hidden */
+  animation: fadeIn 1s forwards;
+  animation-delay: 2.5s; /* Delay for hexagon image appearance */
+}
+
+.hexagon-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 15%;
+}
+
+/* Vision Section */
+.vision-items {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  opacity: 0; /* Initially hidden */
+  animation: fadeIn 1s forwards;
+  animation-delay: 3.5s; /* Delay for vision items appearance */
+}
+
+.vision-item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.vision-icon {
+  font-size: 2rem;
+  color: #00bcd4; /* Vision icon color */
+}
+
+.vision-item h4 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #333;
+}
+
+.vision-item p {
+  font-size: 1rem;
+  color: #666;
+}
+
+/* Hover Effect for Vision Items */
+.vision-item:hover {
+  background-color: #f0f4f8;
+  transform: translateX(10px) scale(1.05);
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+/* Smooth Page Loading */
+.loading {
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 1s ease-in-out;
+}
+
+/* Smooth Scroll */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Mobile and Tablet Adjustments */
+@media (max-width: 768px) {
+  .content-flex-container {
+    flex-direction: column;
+    align-items: center;
+  }
+  .left-card, .right-card {
+    width: 100%;  /* Full width on small screens */
+  }
+}
+.left-card, .right-card {
+  position: relative;
+  border-radius: 16px;
+  overflow: hidden;
+  background: #f2e2e2;
+  color: #0d0c0c;
+  padding: 20px;
+  box-shadow: 0 8px 20px rgba(232, 23, 23, 0.3);
+}
+
+/* Moving border lines */
+.left-card::before, .right-card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  padding: 2px;
+  background: linear-gradient(120deg, #00f0ff, #ff00c8, #00f0ff);
+  -webkit-animation: alternate-reverse 6s linear infinite;
+  animation: alternate-reverse 6s linear infinite;
+  background-size: 300% 300%;
+  animation: moveBorder 6s linear infinite;
+  border-radius: 16px;
+  z-index: -1;
+  filter: blur(10px);
+  mask-composite: exclude;
+  pointer-events: none;
+}
+
+@keyframes moveBorder {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
